@@ -1,0 +1,17 @@
+install.sh
+install
+bootstrap.sh
+bootstrap
+script/bootstrap
+setup.sh
+setup
+script/setup
+
+.git
+.gitignore
+.gitmodules
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+

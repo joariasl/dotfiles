@@ -1,0 +1,33 @@
+[tools]
+awscli = "latest"
+gh = "latest"
+gitleaks = "latest"
+go = "latest"
+gradle = "latest"
+helm = "latest"
+java = "temurin"
+kops = "latest"
+krew = "latest"
+kubectl = "latest"
+kubectx = "latest"
+kubens = "latest"
+maven = "latest"
+neovim = "latest"
+node = "lts"
+openbao = "latest"
+opentofu = "latest"
+pandoc = "latest"
+pnpm = "latest"
+pulumi = "latest"
+python = "latest"
+rust = "latest"
+temporal = "latest"
+terraform = "latest"
+trivy = "latest"
+uv = "latest"
+vault = "latest"
+
+[settings]
+
+[settings.self_update]
+auto = true
