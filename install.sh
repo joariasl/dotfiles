@@ -50,7 +50,7 @@ fi
 
 stow zsh
 
-setup/starship.sh
+export PATH="$HOME/.local/bin:$PATH"
 setup/mise.sh
+setup/starship.sh
 setup/git.sh
-
