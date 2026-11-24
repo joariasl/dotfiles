@@ -13,4 +13,7 @@ if { [ "${CODER:-}" = "true" ] || [ -n "${CODER_WORKSPACE_ID:-}" ]; } && [ "$(un
   fi
 fi
 
-stow -v -R -d "$SCRIPT_DIR" -t "$HOME" zsh
+stow -v -R --no-folding -d "$SCRIPT_DIR" -t "$HOME" zsh
+
+# Update all zinit plugins in parallel
+TERM=xterm-256color zsh -c 'source ~/.zshrc; zinit update --all'
