@@ -11,8 +11,7 @@ case "$PKG_MANAGER" in
   apt)
     DEBIAN_FRONTEND=noninteractive $SUDO apt-get update -qq
     DEBIAN_FRONTEND=noninteractive $SUDO apt-get install -y -qq \
-      $STANDARD_PKGS \
-      starship
+      $STANDARD_PKGS
     ;;
   dnf)
     $SUDO dnf install -y -q \
@@ -20,13 +19,11 @@ case "$PKG_MANAGER" in
     ;;
   pacman)
     $SUDO pacman -Sy --noconfirm --needed \
-      $STANDARD_PKGS \
-      starship
+      $STANDARD_PKGS
     ;;
   apk)
     $SUDO apk add --no-cache \
-      $STANDARD_PKGS \
-      starship
+      $STANDARD_PKGS
     ;;
 esac
 
