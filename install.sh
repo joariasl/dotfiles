@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Detect OS
 case "$(uname -s)" in
@@ -50,8 +50,7 @@ elif [[ "$OS" == "linux" ]]; then
   setup/linux.sh
 fi
 
-stow -v -R -d "$SCRIPT_DIR" -t "$HOME" zsh
-
+setup/zsh.sh
 export PATH="$HOME/.local/bin:$PATH"
 setup/mise.sh
 setup/starship.sh
