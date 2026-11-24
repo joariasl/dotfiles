@@ -5,5 +5,5 @@ if ! command -v mise >/dev/null 2>&1 && [[ ! -x "$HOME/.local/bin/mise" ]]; then
   "$HOME/.local/bin/mise" --version
 fi
 
-stow mise
+stow -v -R -d "$SCRIPT_DIR" -t "$HOME" mise
 mise install

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Detect OS
 case "$(uname -s)" in
   Darwin) export OS="macos" ;;
@@ -48,7 +50,7 @@ elif [[ "$OS" == "linux" ]]; then
   setup/linux.sh
 fi
 
-stow zsh
+stow -v -R -d "$SCRIPT_DIR" -t "$HOME" zsh
 
 export PATH="$HOME/.local/bin:$PATH"
 setup/mise.sh
