@@ -23,4 +23,3 @@ This will install:
 - **mise:** Installed via the official shell script.
 - **Starship:** Installed via the official shell script (falls back to `mise` if that fails).
 - **Symlinks of Dofiles:** Uses GNU Stow to link the dotfiles into your home directory (`~`).
-
